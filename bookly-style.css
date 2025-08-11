@@ -231,6 +231,7 @@ html {
   color: #a1866f;
   user-select: none;
   opacity: 0.7;
-  pointer-events: none; /* so it doesn't block clicks */
+  pointer-events: none; 
   z-index: 1000;
 }
+
