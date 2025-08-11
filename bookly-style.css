@@ -1,0 +1,224 @@
+/* General styles */
+body {
+  font-family: 'Merriweather', serif;
+  /* fallback to serif */
+  background: linear-gradient(135deg, #f7ede2, #f5e1da);
+  padding: 20px;
+  text-align: center;
+  color: #4a3c31;
+}
+
+.app-title, .tagline {
+  font-family: 'Cormorant Garamond', serif;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#questionnaire label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+#results {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#favorites h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Book card */
+.book {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.book img {
+  max-width: 100px;
+  border-radius: 6px;
+}
+
+.book-info {
+  max-width: 450px;
+}
+
+.book-info h3 {
+  margin: 0 0 8px 0;
+}
+
+.book-info p {
+  margin: 0;
+  color: #555;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 45%;
+    padding: 15px;
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  #questionnaire {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .book {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book img {
+    max-width: 80%;
+    margin-bottom: 10px;
+  }
+  .book-info {
+    max-width: 100%;
+  }
+}
+.app-title {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #6b4c3b; /* warm brown */
+  margin-bottom: 0;
+}
+
+.tagline {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #a1866f; /* lighter warm tone */
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+}
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 6px #d1bfa7, 0 0 10px #d1bfa7;
+    color: #6b4c3b;
+  }
+  50% {
+    text-shadow: 0 0 14px #f9e6d3, 0 0 20px #f9e6d3;
+    color: #7a5a42;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-title {
+  animation: glow 3s ease-in-out infinite, fadeInUp 1.2s ease forwards;
+}
+
+.tagline {
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+/* Warm glowing background behind container */
+.container {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:
+    0 0 30px 10px rgba(241, 207, 168, 0.3),
+    0 0 60px 25px rgba(241, 207, 168, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Subtle glow on container hover */
+.container:hover {
+  box-shadow:
+    0 0 40px 15px rgba(241, 207, 168, 0.5),
+    0 0 80px 30px rgba(241, 207, 168, 0.4);
+}
+
+/* Cozy button hover effects */
+button {
+  background: #d6a961;
+  color: #4a3c31;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 6px rgba(214, 169, 97, 0.5);
+}
+
+button:hover {
+  background-color: #f1cfaa;
+  box-shadow: 0 0 14px 4px rgba(241, 207, 168, 0.7);
+  color: #3c2e1e;
+}
+
+/* For mobile, adjust button margins */
+@media (max-width: 480px) {
+  button {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
